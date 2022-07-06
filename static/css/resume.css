@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Ingrid+Darling&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-color: black;
+}
+
+.container {
+    width: 953px;
+    /* height: 1560px; */
+    margin: 0 auto 0 auto;
+    /* border: solid 1px red; */
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+    /* border: solid 1px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-family: 'Ingrid Darling', cursive;
+    color: black;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: #FC9803;
+    text-shadow: 2px 4px 4px white;
+    font-size: 24px;
+}
+
+nav ul {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #453ABE; 
+}
+
+.active {
+    color: #333;
+    background-color: #ffffff;
+    border: solid 2px #ffffff;
+    border-radius: 5px;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: #ffffff;
+    /* padding: 5px; */
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    width: 70px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.contact {
+position: relative;
+display: inline-block;
+font-size: 12px;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+font-size: 12px;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown-content a {
+color: black;
+padding: 4px 16px;
+text-decoration: none;
+display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #453ABE;
+}
+
+.contact:hover .dropdown-content {
+display: block;
+}
+
+.contact:hover .dropbtn {
+background-color: #3e8e41;
+}
+
+.container .profile {
+    width: 100%;
+    margin-top: 119px;
+    /* margin-left: 102px; */
+    box-shadow: 4px 4px 4px white;
+    /* border: solid 1px #ffffff; */
+}
+
+.profile img {
+    width: 100%;
+    /* height: 100%; */
+}

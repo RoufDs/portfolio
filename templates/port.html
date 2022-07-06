@@ -1,0 +1,141 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/port.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<body style="background-image: url(https://i.gifer.com/4NB4.gif);">
+    <div class="container">
+        <!-- *nav -->
+        <nav>
+            <h1>RoufDs</h1>
+            <ul>
+                <li>
+                    <a class="list" href="{% url 'index' %}">Home</a>
+                </li>
+                <li>
+                    <a class="list" href="{% url 'resume' %}">Resume</a>
+                </li>
+                <li>
+                    <a class="list active   " href="{% url 'portfolio' %}">Portfolio</a>
+                </li>
+                <li>
+                    <div class="contact">
+                        <button class="dropbtn">Contact</button>
+                        <div class="dropdown-content">
+                            <a href="https://github.com/RoufDs">Github</a>
+                            <a href="https://web.facebook.com/profile.php?id=100012141691598">Facebook</a>
+                            <a href="https://www.linkedin.com/in/supakorn-sansuk-8446861a8/">Linkein</a>
+                            <a href="https://www.youtube.com/channel/UCS4ANwEgRvaMaK32v21TB1Q">Youtube</a>
+                            <a href="https://www.instagram.com/supakornsansuk/">Instagram</a>
+                        </div>
+                        </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="baner">
+            <div class="myslides fade ">
+                <img src="{% static 'images/port/shamin-haky-Uhx-gHPpCDg-unsplash.jpg' %}" alt="">
+            </div>
+            <div class="myslides fade">
+                <img src="{% static 'images/port/dominik-malinowski-33BNdaQHH9Q-unsplash.jpg' %}" alt="">
+            </div>
+            <div class="myslides fade">
+                <img src="{% static 'images/port/arpad-czapp-H424WdcQN4Y-unsplash.jpg' %}" alt="">
+            </div>
+        </div>
+
+        <div class="mywebsite">
+            <div class="header">
+                <p>My Website</p>
+                <div class="my-search">
+                    <form autocomplete="off" class="my-form" id="my_form">
+                        {% csrf_token %}
+                        <input type="text" name="my_input" placeholder="search..." class="my-input" id="my_input">
+                    </form>
+                    <div class="my-results not-visible" id="my_results"></div>
+                </div>
+            </div>
+            <div class="details" id="my_details">
+                {% for my_web in my_web %}      
+                <div class="inside">
+                    <div class="name">
+                        <a href="{{ my_web.url }}">{{ my_web.name }}</a>
+                    </div>
+                    <div class="image" style="background-image: url({{ my_web.image.url}});">
+                    </div>
+                    <div class="description">
+                        <p>{{ my_web.description }}</p>
+                    </div>
+                    <div class="create">
+                        <p>{{ my_web.category }} <span>/</span> Date: {{ my_web.create }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="pagination">
+                <span>
+                    {% if my_web.has_previous %}
+                    <a href="?page=1">&laquo; first</a>
+                    <a href="?page={{ my_web.previous_page_number }}">previous</a>
+                    {% endif %}
+
+                    <span class="current">
+                        Page {{ my_web.number }} of {{ my_web.paginator.num_pages }}.
+                    </span>
+
+                    {% if my_web.has_next %}
+                    <a href="?page={{ my_web.next_page_number }}">next</a>
+                    <a href="?page={{ my_web.paginator.num_pages }}">last &raquo;</a>
+                    {% endif %}
+                </span>
+            </div>
+        </div>
+        <div class="mailbox">
+            <div class="mailbox-inside">
+                <div class="mailbox-header">
+                    <h3>ติอต่อสอบถาม</h3>
+                </div>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="mailbox-subject">
+                        <input type="text" name="subject" placeholder="ติดต่อเรื่อง" required>
+                    </div>
+                    <br>
+                    <div class="mailbox-name">
+                        <input type="text" name="firstname" placeholder="ชื่อ" required>
+                        <input type="text" name="lastname" placeholder="นามสกุล" required>
+                    </div>
+                    <br>
+                    <div class="mailbox-email">
+                        <input type="email" name="email" placeholder="อีเมล" required>
+                    </div>
+                    <br>
+                    <div class="mailbox-message">
+                        <textarea name="message" placeholder="กรุณากรอกข้อความ" cols="30" rows="10" required></textarea>
+                    </div>
+                    <div class="mailbox-button">
+                        <button type="submit">ส่งข้อความ</button>
+                    </div>
+                </form>
+                {% if messages %}
+                    <div class="success">
+                        {% for message in messages %}
+                            <h3>{{ message }}</h3>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/nav.js' %}"></script>
+    <script src="{% static 'js/port.js' %}"></script>
+</body>
+</html>

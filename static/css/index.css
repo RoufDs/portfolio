@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css2?family=Ingrid+Darling&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    width: 953px;
+    /* height: 1560px; */
+    margin: 0 auto 0 auto;
+    /* border: solid 1px red; */
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+    /* border: solid 1px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-family: 'Ingrid Darling', cursive;
+    color: black;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: #FC9803;
+    text-shadow: 2px 4px 4px white;
+    font-size: 24px;
+}
+
+nav ul {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #453ABE; 
+}
+
+.active {
+    color: #333;
+    background-color: #ffffff;
+    border: solid 2px #ffffff;
+    border-radius: 5px;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: #ffffff;
+    /* padding: 5px; */
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    width: 70px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.contact {
+position: relative;
+display: inline-block;
+font-size: 12px;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+font-size: 12px;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown-content a {
+color: black;
+padding: 4px 16px;
+text-decoration: none;
+display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #453ABE;
+}
+
+.contact:hover .dropdown-content {
+display: block;
+}
+
+.contact:hover .dropbtn {
+background-color: #3e8e41;
+}
+
+.info-header {
+    width: 710px;
+    height: 645.2px;
+    height: auto;
+    /* border: solid 1px red; */
+    margin: 78px auto 0 auto;
+    text-align: center;
+}
+
+.info-header h1 {
+    text-shadow: 2px 1px 4px #FFB800;
+    font-size: 64px;
+}
+
+.info-header img {
+    width: 100%;
+    margin-top: 45px;
+}
+
+.info-americano {
+    width: 587px;
+    height: 324px;
+    margin-top: 247px;
+    /* border: solid 1px red; */
+    display: flex;
+}
+
+.info-americano img {
+    width: 20%;
+    margin-right: 30px;
+}
+
+.info-americano .detail {
+    width: 70%;
+    /* border: solid 1px black; */
+}
+
+.info-americano .detail h3 {
+    font-size: 36px;
+}
+
+.info-americano .detail p {
+    font-size: 12px;
+    margin-top: 28px;
+}
+
+.info-americano .detail .sugar {
+    display: flex;
+    width: 124px;
+    height: 26px;
+    margin-top: 28px;
+    align-items: center;
+    /* border: solid 1px red; */
+}
+
+.info-americano .detail .sugar i {
+    margin-right: 6px;
+}
+
+.info-americano .detail .sugar div {
+    width: 20px;
+    height: 5px;
+    background-color: black;
+    opacity: 0.2;
+    margin-right: 6px;
+}
+
+.info-americano .detail .SL {
+    font-size: 10px;
+    /* position: absolute; */
+    margin: 0  0 0 20px ;
+}
+
+/* *latte */
+.info-latte {
+    width: 587px;
+    height: 279px;
+    margin-top: 273px;
+    position: relative;
+    left: 360px;
+    /* border: solid 1px red; */
+    display: flex;
+}
+
+.info-latte img {
+    width: 20%;
+    margin-left: 30px;
+}
+
+.info-latte .detail {
+    width: 70%;
+    /* border: solid 1px black; */
+}
+
+.info-latte .detail h3 {
+    font-size: 36px;
+}
+
+.info-latte .detail p {
+    font-size: 12px;
+    margin-top: 28px;
+}
+
+.info-latte .detail .sugar {
+    display: flex;
+    width: 124px;
+    height: 26px;
+    margin-top: 28px;
+    align-items: center;
+    /* border: solid 1px red; */
+}
+
+.info-latte .detail .sugar i {
+    margin-right: 6px;
+}
+
+.info-latte .detail .sugar div {
+    width: 20px;
+    height: 5px;
+    background-color: black;
+    opacity: 0.2;
+    margin-right: 6px;
+}
+
+.info-latte .detail .sugar #first {
+    opacity: 0.6;
+}
+
+.info-latte .detail .SL {
+    font-size: 10px;
+    /* position: absolute; */
+    margin: 0  0 0 20px ;
+}
+
+/* *espresso */
+.info-espresso {
+    width: 587px;
+    height: 311px;
+    margin-top: 273px;
+    position: relative;
+    /* left: 360px; */
+    /* border: solid 1px red; */
+    display: flex;
+}
+
+.info-espresso img {
+    width: 20%;
+    margin-right: 30px;
+}
+
+.info-espresso .detail {
+    width: 70%;
+    /* border: solid 1px black; */
+}
+
+.info-espresso .detail h3 {
+    font-size: 36px;
+}
+
+.info-espresso .detail p {
+    font-size: 12px;
+    margin-top: 28px;
+}
+
+.info-espresso .detail .sugar {
+    display: flex;
+    width: 124px;
+    height: 26px;
+    margin-top: 28px;
+    align-items: center;
+    /* border: solid 1px red; */
+}
+
+.info-espresso .detail .sugar i {
+    margin-right: 6px;
+}
+
+.info-espresso .detail .sugar div {
+    width: 20px;
+    height: 5px;
+    background-color: black;
+    opacity: 0.2;
+    margin-right: 6px;
+}
+
+.info-espresso .detail .sugar #first {
+    opacity: 0.6;
+}
+
+.info-espresso .detail .SL {
+    font-size: 10px;
+    /* position: absolute; */
+    margin: 0  0 0 20px ;
+}
+
+/* *cappuccino */
+.info-cappuccino {
+    width: 587px;
+    height: 299px;
+    margin-top: 273px;
+    position: relative;
+    left: 360px;
+    /* border: solid 1px red; */
+    display: flex;
+}
+
+.info-cappuccino img {
+    width: 20%;
+    margin-left: 30px;
+}
+
+.info-cappuccino .detail {
+    width: 70%;
+    /* border: solid 1px black; */
+}
+
+.info-cappuccino .detail h3 {
+    font-size: 36px;
+}
+
+.info-cappuccino .detail p {
+    font-size: 12px;
+    margin-top: 28px;
+}
+
+.info-cappuccino .detail .sugar {
+    display: flex;
+    width: 124px;
+    height: 26px;
+    margin-top: 28px;
+    align-items: center;
+    /* border: solid 1px red; */
+}
+
+.info-cappuccino .detail .sugar i {
+    margin-right: 6px;
+}
+
+.info-cappuccino .detail .sugar div {
+    width: 20px;
+    height: 5px;
+    background-color: black;
+    opacity: 0.2;
+    margin-right: 6px;
+}
+
+.info-cappuccino .detail .sugar #first {
+    opacity: 0.6;
+}
+
+.info-cappuccino .detail .SL {
+    font-size: 10px;
+    /* position: absolute; */
+    margin: 0  0 0 20px ;
+}
+
+/* *mocha */
+.info-mocha {
+    width: 587px;
+    height: 299px;
+    margin-top: 273px;
+    position: relative;
+    /* left: 360px; */
+    /* border: solid 1px red; */
+    display: flex;
+}
+
+.info-mocha img {
+    width: 20%;
+    margin-right: 30px;
+}
+
+.info-mocha .detail {
+    width: 70%;
+    /* border: solid 1px black; */
+}
+
+.info-mocha .detail h3 {
+    font-size: 36px;
+}
+
+.info-mocha .detail p {
+    font-size: 12px;
+    margin-top: 28px;
+}
+
+.info-mocha .detail .sugar {
+    display: flex;
+    width: 124px;
+    height: 26px;
+    margin-top: 28px;
+    align-items: center;
+    /* border: solid 1px red; */
+}
+
+.info-mocha .detail .sugar i {
+    margin-right: 6px;
+}
+
+.info-mocha .detail .sugar div {
+    width: 20px;
+    height: 5px;
+    background-color: black;
+    opacity: 0.2;
+    margin-right: 6px;
+}
+
+.info-mocha .detail .sugar #first {
+    opacity: 0.6;
+}
+
+.info-mocha .detail .SL {
+    font-size: 10px;
+    /* position: absolute; */
+    margin: 0  0 0 20px ;
+}
+
+.footer {
+    display: flex;
+    margin: 0 auto 0 auto;
+    width: 1440px;
+    height: 302px;
+    background-color: #FDC9A4;
+    border-radius: 180px 180px 0 0;
+}
+
+.footer img {
+    margin-left: 69px;
+}
+
+.footer .coffee {
+    margin-left: 566px;
+    margin-top: 31px;
+    width: 223px;
+}
+
+.footer .coffee li {
+    margin-bottom: 21px;
+    margin-left: 16px;
+}
+
+.footer .coffee li a {
+    text-decoration: none;
+}
+
+.footer .coffee li a:hover {
+    color: #ffffff;
+}
+
+.footer .contact {
+    margin-left: 19px;
+    margin-top: 31px;
+}
+
+.footer .contact li {
+    list-style: none;
+    margin-bottom: 21px;
+    margin-left: 7px;
+}
+
+.footer .contact li a {
+    text-decoration: none;
+}
+
+.footer .contact li a:hover {
+    color: #ffffff;
+}
+
+.footer p {
+    position: unset;
+    text-align: center;
+}
+
+.footer .text-center {
+    position: absolute;
+    left: 50%;
+}

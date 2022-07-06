@@ -1,0 +1,222 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Home{% endblock %}</title>
+    {% block style %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {% endblock %}
+</head>
+{% block bg %}
+<body style="background-image: url({% static 'images/index/background.svg' %});">
+{% endblock %}
+    <div class="container">
+        <!-- *nav -->
+        {% block nav %}
+        <nav>
+            <h1>RoufDs</h1>
+            <ul>
+                <li>
+                    <a class="list active" href="{% url 'index' %}">Home</a>
+                </li>
+                <li>
+                    <a class="list" href="{% url 'resume' %}">Resume</a>
+                </li>
+                <li>
+                    <a class="list" href="{% url 'portfolio' %}">Portfolio</a>
+                </li>
+                <li>
+                    <div class="contact">
+                        <button class="dropbtn">Contact</button>
+                        <div class="dropdown-content">
+                            <a href="https://github.com/RoufDs">Github</a>
+                            <a href="https://web.facebook.com/profile.php?id=100012141691598">Facebook</a>
+                            <a href="https://www.linkedin.com/in/supakorn-sansuk-8446861a8/">Linkein</a>
+                            <a href="https://www.youtube.com/channel/UCS4ANwEgRvaMaK32v21TB1Q">Youtube</a>
+                            <a href="https://www.instagram.com/supakornsansuk/">Instagram</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        {% endblock %}
+
+        <!-- *body -->
+        {% block body %}
+        <div class="info-header">
+            <h1>COFFEE</h1>
+            <img src="{% static 'images/index/Header.svg' %}" alt="">
+        </div>
+
+        <!-- *Americano -->
+        <div class="info-americano">
+            <img src="{% static 'images/index/Vlg8de-coffee-mug 2.svg' %}" alt="">
+            <section class="detail">
+                <h3 id="americano">AMERICANO</h3>
+                <p>An Americano is an espresso drink made with hot water and espresso, also called a Caffe Americano. The drink can be made with either one or two shots of espresso, and varying ratios of water. Diluting the strong dark espresso roast brings the flavor closer to a drip coffee: which might be where the name originated! The exact origin of the term is murky, but it’s thought to have originated in the 1970’s. “Americano” means American in Italian or Spanish, referring to the coffee’s strength being closer to an American-style drip coffee.</p>
+
+                <section class="sugar">
+                    <i class="fa-solid fa-cubes-stacked"></i>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </section>
+                <p class="SL">Sugar Level: 0%</p>
+            </section>
+        </div>
+
+        <!-- *latte -->
+        <div class="info-latte">
+            <section class="detail">
+                <h3 id="latte">LATTE</h3>
+                <p>A latte is a coffee drink with espresso, steamed milk and a layer of foam on top. What’s the difference between a latte vs a cappuccino? A cappuccino has equal parts espresso, steamed milk and foam (⅓ each). A latte has ⅓ espresso and 2/3 steamed milk, with a thin layer of foam on top. Oh, and a macchiato is just espresso with a thicker layer of foam on top.</p>
+                <section class="sugar">
+                    <i class="fa-solid fa-cubes-stacked"></i>
+                    <div id="first"></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </section>
+                <p class="SL">Sugar Level: 25%</p>
+            </section>
+            <img src="{% static 'images/index/943-9430047_coffee 2.svg' %}" alt="">
+        </div>
+
+        <!-- *espresso -->
+        <div class="info-espresso">
+            <img src="{% static 'images/index/espreso 1.svg' %}" alt="">
+            <section class="detail">
+                <h3 id="espresso">ESPRESSO</h3>
+                <p>Espresso is an Italian way of making coffee in highly concentrated shots. A single espresso shot is 1 ounce, and a double shot is 2 ounces. Espresso can be sipped in small cups, or used as the base for popular espresso drinks like the Americano, latte, cappuccino, and more. To make espresso, water is forced through finely ground coffee beans at very high pressure. A espresso shot has crema on top: a light brown foam that adds a rich flavor and frothy texture.</p>
+                <section class="sugar">
+                    <i class="fa-solid fa-cubes-stacked"></i>
+                    <div id="first"></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </section>
+                <p class="SL">Sugar Level: 25%</p>
+            </section>
+        </div>
+
+        <!-- *cappuccino * -->
+        <div class="info-cappuccino">
+            <section class="detail">
+                <h3 id="cappuccino">CAPPUCCINO</h3>
+                <p>A cappuccino is an espresso drink with steamed milk, milk foam and espresso. It’s very similar to a latte (cafe latte), but the proportion of steamed milk is different. Here’s the breakdown of a latte vs cappuccino:</p>
+                <br>
+                <ul>
+                    <li>A cappuccino has equal parts espresso, steamed milk and foam (⅓ each).</li>
+                    <li>A latte is ⅓ espresso and 2/3 steamed milk, with a thin layer of foam on top.</li>
+                </ul>
+                <section class="sugar">
+                    <i class="fa-solid fa-cubes-stacked"></i>
+                    <div id="first"></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </section>
+                <p class="SL">Sugar Level: 25%</p>
+            </section>
+            <img src="{% static 'images/index/cappuccino 1.svg' %}" alt="">
+        </div>
+
+        <!-- *mocha -->
+        <div class="info-mocha">
+            <img src="{% static 'images/index/mocha 1.svg' %}" alt="">
+            <section class="detail">
+                <h3 id="mocha">MOCHA</h3>
+                <p>A mocha or mocha latte is a drink made with espresso and steamed milk that’s flavored with chocolate syrup. There’s lots of variation on exactly what constitutes this espresso drink: it’s up to the barista! This drink can be made with various levels of espresso shots, quantities of steamed milk, and amounts of chocolate syrup. The mocha rose to popularity with Starbucks culture starting in the 1980’s in America.</p>
+                <section class="sugar">
+                    <i class="fa-solid fa-cubes-stacked"></i>
+                    <div id="first"></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </section>
+                <p class="SL">Sugar Level: 25%</p>
+            </section>
+        </div>
+
+        {% endblock %}
+    </div>
+    <div class="footer">
+        <img src="{% static 'images/index/Group 6.svg' %}" alt=""">
+        <div class="coffee">
+            <h1>Coffee</h1>
+            <ul>
+                <li>
+                    <a href="#americano">americano</a>
+                </li>
+                <li>
+                    <a href="#latte">latte</a>
+                </li>
+                <li>
+                    <a href="#espresso">espresso</a>
+                </li>
+                <li>
+                    <a href="#cappuccino">cappuccino</a>
+                </li>
+                <li>
+                    <a href="#mocha">mocha</a>
+                </li>
+            </ul>
+        </div>
+        <div class="contact">
+            <h1>Contact</h1>
+            <ul>
+                <li>
+                    <span>
+                        <i class="fa-brands fa-github-square"></i>
+                    </span>
+                    <span>
+                        <a href="https://github.com/RoufDs">Github</a>
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <i class="fa-brands fa-facebook-square"></i>
+                    </span>
+                    <span>
+                        <a href="https://web.facebook.com/profile.php?id=100012141691598">Facebook</a>
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <i class="fa-brands fa-linkedin"></i>
+                    </span>
+                    <span>
+                        <a href="https://www.linkedin.com/in/supakorn-sansuk-8446861a8/">Linkein</a>
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <i class="fa-brands fa-youtube-square"></i>
+                    </span>
+                    <span>
+                        <a href="https://www.youtube.com/channel/UCS4ANwEgRvaMaK32v21TB1Q">Youtube</a>
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <i class="fa-brands fa-instagram-square"></i>
+                    </span>
+                    <span>
+                        <a href="https://www.instagram.com/supakornsansuk/">Instagram</a>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- *script -->
+    {% block script %}
+    <script src="{% static 'js/nav.js' %}"></script>
+    {% endblock %}
+</body>
+</html>

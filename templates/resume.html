@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="{% static 'css/resume.css' %}">
+</head>
+<body>
+    <div class="container">
+        <!-- *nav -->
+        <nav>
+            <h1>RoufDs</h1>
+            <ul>
+                <li>
+                    <a class="list" href="{% url 'index' %}">Home</a>
+                </li>
+                <li>
+                    <a class="list active" href="{% url 'resume' %}">Resume</a>
+                </li>
+                <li>
+                    <a class="list" href="{% url 'portfolio' %}">Portfolio</a>
+                </li>
+                <li>
+                    <div class="contact">
+                        <button class="dropbtn">Contact</button>
+                        <div class="dropdown-content">
+                            <a href="https://github.com/RoufDs">Github</a>
+                            <a href="https://web.facebook.com/profile.php?id=100012141691598">Facebook</a>
+                            <a href="https://www.linkedin.com/in/supakorn-sansuk-8446861a8/">Linkein</a>
+                            <a href="https://www.youtube.com/channel/UCS4ANwEgRvaMaK32v21TB1Q">Youtube</a>
+                            <a href="https://www.instagram.com/supakornsansuk/">Instagram</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="profile">
+            <img src="{% static 'images/resume/main.svg' %}" alt="">
+        </div>
+    </div>
+    
+    <script src="{% static 'js/nav.js' %}"></script>
+</body>
+</html>
